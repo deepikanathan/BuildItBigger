@@ -216,11 +216,5 @@
     <orderEntry type="module" module-name="javaJoker" />
     <orderEntry type="module" module-name="backend" />
     <orderEntry type="library" name="Gradle: android-android-28" level="project" />
-    <orderEntry type="module" module-name="jokefactory" />
-    <orderEntry type="module" module-name="javaJoker" />
-    <orderEntry type="module" module-name="backend" />
-    <orderEntry type="module" module-name="jokefactory" />
-    <orderEntry type="module" module-name="javaJoker" />
-    <orderEntry type="module" module-name="backend" />
   </component>
 </module>
