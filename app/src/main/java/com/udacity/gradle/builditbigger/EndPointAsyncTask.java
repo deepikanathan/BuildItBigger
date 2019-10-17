@@ -18,6 +18,7 @@ class EndPointAsyncTask extends AsyncTask<MainActivityFragment, Void, String> {
 
     @Override
     protected String doInBackground(MainActivityFragment... params) {
+        String retVal = "";
         mainActivityFragment = params[0];
 
         context = mainActivityFragment.getActivity();
@@ -35,9 +36,10 @@ class EndPointAsyncTask extends AsyncTask<MainActivityFragment, Void, String> {
             myApiService = builder.build();
         }
         try {
-            return myApiService.tellJoke().execute().getData();
+            retVal = myApiService.tellJoke().execute().getData();
+            return retVal;
         } catch (IOException e) {
-            return e.getMessage();
+            return null;
         }
     }
 

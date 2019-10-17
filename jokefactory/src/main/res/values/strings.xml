@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">JokeFactory</string>
     <string name="joke_envelope">JokeEnvelope</string>
+    <string name="joke_unavailable">No jokes available</string>
 </resources>

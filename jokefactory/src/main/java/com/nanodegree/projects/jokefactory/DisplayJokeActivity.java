@@ -3,6 +3,7 @@ package com.nanodegree.projects.jokefactory;
 import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.widget.TextView;
 
 public class DisplayJokeActivity extends AppCompatActivity {
@@ -13,17 +14,16 @@ public class DisplayJokeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_display_joke);
 
         TextView textview = findViewById(R.id.joke_text);
-        String jokeResult = null;
         Intent intent = getIntent();
-        jokeResult = intent.getStringExtra(getString(R.string.joke_envelope));
+        String jokeResult = intent.getStringExtra(getString(R.string.joke_envelope));
 
-        if (jokeResult != null)
+        if (!TextUtils.isEmpty(jokeResult))
         {
             textview.setText(jokeResult);
         }
         else
         {
-            textview.setText("No jokes found yet");
+            textview.setText(R.string.joke_unavailable);
         }
 
     }

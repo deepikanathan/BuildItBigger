@@ -4,6 +4,7 @@ import androidx.test.runner.AndroidJUnit4;
 import org.junit.runner.RunWith;
 import org.junit.Test;
 
+import static junit.framework.TestCase.assertNotNull;
 import static junit.framework.TestCase.assertTrue;
 
 /**
@@ -18,6 +19,7 @@ public class EndPointAsyncTaskTest {
         fragment.gotJoke = true;
         new EndPointAsyncTask().execute(fragment);
         Thread.sleep(5000);
+        assertNotNull(fragment.jokeToShow);
         assertTrue("Joke = " + fragment.jokeToShow, fragment.jokeToShow != null);
     }
 }
